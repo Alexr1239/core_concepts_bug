@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css"/>
+    <title>Hello GUI</title>
+    <meta name="description" content="GUI for a Holochain app" />
+  </head>
+
+  <body onload="get_agent_id()">
+    <script
+      type="text/javascript"
+      src="hc-web-client/hc-web-client-0.5.1.browser.min.js">
+    </script>
+    <script type="text/javascript" src="hello.js"></script>
+
+    <button onclick="hello()" type="button">Hi</button>
+    <div>Greetings <span id="output"></span></div>
+    <h3>Create a post</h3>
+    <textarea id="post" placeholder="Enter your post :)"></textarea>
+    <button onclick="create_post()" type="button">Submit Post</button>
+    <div>Address:&nbsp<span id="address_output"></span></div>
+    <h3>Retrieve Post</h3>
+    <input type="text" id="address_in" placeholder="Enter agents id">
+    <button onclick="retrieve_posts()" type="button">Get Posts</button>
+    <ul id="posts_output"></ul>
+    <h3>Agent ID:</h3>
+    <div id="agent_id"></div>
+
+
+  </body>
+</html>
